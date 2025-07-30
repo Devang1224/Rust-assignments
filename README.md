@@ -19,11 +19,11 @@
 
 - Convert Celsius ↔ Fahrenheit.
 - Ask user input in terminal and print the converted value.
-1.  **Number Guessing Game**
+4.  **Number Guessing Game**
     - Generate a random number.
     - Take user input and give feedback: "Too high", "Too low", or "Correct".
     - Practice `loop`, `match`, and `Result`.
-2.  **Tip Calculator**
+5.  **Tip Calculator**
     - Ask for bill amount and tip %.
     - Print total payable.
     - Format output to 2 decimal places using `format!`.
