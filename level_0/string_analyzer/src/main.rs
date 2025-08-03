@@ -20,7 +20,7 @@ fn main() {
             longestWord = word.to_string();
         }
 
-        let frequency = wordFreqency.get(*word);
+        let frequency = wordFreqency.get(*word); // type of word is &&str so to get the value as &str we used * here
         match frequency {
             Some(item) => {
                 wordFreqency.insert(word.to_string(), item + 1);  // rust is automatically dereferencing here 
