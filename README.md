@@ -61,32 +61,26 @@
 2. **Shape Area Calculator**
     - Use enums like `Shape::Circle`, `Shape::Rectangle`, etc.
     - Implement trait `Area` with a method `area()` for each shape.
-3. **Dice Roller**
-    - Randomly generate a number 1–6.
-    - Match against number to show dice emoji 🎲.
-4. **Basic Login Flow** 
+3. **Basic Login Flow** 
 
           Store usernames & passwords in a `HashMap`.
 
           Validate login with proper `Result`.
 
-**5.   Student Grade Tracker**
+**4.   Student Grade Tracker**
 
 - Struct: `Student { name, marks: Vec<u32> }`
 - Calculate average and grade (`A`, `B`, `C`).
 - Use `enum Grade`.
 
- **6   Ticket Booking Simulator**
+ **5   Ticket Booking Simulator**
 
 - Enum: `SeatType { Economy, Business, First }`
 - Struct: `Ticket { name, seat: SeatType }`
 - Print ticket with pricing based on type.
 
- **7     Dice Roller**
 
-- Randomly generate a number 1–6.
-- Match against number to show dice emoji 🎲.
-1.  **Basic Login Flow**
+**8  Basic Login Flow**
 
           Store usernames & passwords in a `HashMap`.
 
