@@ -7,7 +7,7 @@ struct User {
 }
 
 impl User {
-    fn validate(&self, password: String) -> bool {
+    fn validate(&self, password: &str) -> bool {
 
         if self.password == password {
             return true;
@@ -93,7 +93,7 @@ fn main() {
 
                 let isCorrectPassword = match existingUser {
                     Some(user) => {
-                        user.validate(password)
+                        user.validate(&password)
                     }
                     None => {
                         println!("User not found");
