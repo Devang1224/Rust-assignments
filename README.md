@@ -62,10 +62,8 @@
     - Use enums like `Shape::Circle`, `Shape::Rectangle`, etc.
     - Implement trait `Area` with a method `area()` for each shape.
 3. **Basic Login Flow** 
-
-          Store usernames & passwords in a `HashMap`.
-
-          Validate login with proper `Result`.
+    - Store usernames & passwords in a `HashMap`.
+    - Validate login with proper `Result`.
 
 **4.   Student Grade Tracker**
 
@@ -79,12 +77,6 @@
 - Struct: `Ticket { name, seat: SeatType }`
 - Print ticket with pricing based on type.
 
-
-**8  Basic Login Flow**
-
-          Store usernames & passwords in a `HashMap`.
-
-         Validate login with proper `Result`.
 
 ---
 
