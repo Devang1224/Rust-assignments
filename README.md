@@ -65,19 +65,6 @@
     - Store usernames & passwords in a `HashMap`.
     - Validate login with proper `Result`.
 
-**4.   Student Grade Tracker**
-
-- Struct: `Student { name, marks: Vec<u32> }`
-- Calculate average and grade (`A`, `B`, `C`).
-- Use `enum Grade`.
-
- **5   Ticket Booking Simulator**
-
-- Enum: `SeatType { Economy, Business, First }`
-- Struct: `Ticket { name, seat: SeatType }`
-- Print ticket with pricing based on type.
-
-
 ---
 
 ### 📚 **Topic: Collections (Vec, HashMap, Option, Result)**
