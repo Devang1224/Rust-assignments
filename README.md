@@ -65,7 +65,7 @@
     - Store usernames & passwords in a `HashMap`.
     - Validate login with proper `Result`.
 
----
+--- 
 
 ### 📚 **Topic: Collections (Vec, HashMap, Option, Result)**
 
