@@ -1,6 +1,6 @@
-use::std::{io,io::Write,io::Read,fs::File,fs::OpenOptions};
-use serde::{Deserialize, Serialize};
-use serde_json::{Value};
+use std::{io,io::Write,fs::OpenOptions};
+use serde::{Deserialize};
+use serde_json;
 use csv::Writer;
 use chrono::{DateTime, Local};
 
@@ -54,16 +54,6 @@ fn export_to_csv(user_details:&Vec<User>){
     println!("List should have atleast one row");
     return;
    }
-
-   let json_data = match serde_json::to_string_pretty(user_details) {
-    Ok(data)=>data,
-    Err(err)=>{
-        println!("An unexpected error comes up. Try again later");
-        println!("{}",err);
-        return;
-        
-    }
-  };
    
    let path: String = format!("./{}.csv", Local::now().format("%Y-%m-%d_%H-%M-%S"));
     
@@ -142,21 +132,21 @@ fn main() {
 
     match operation.trim(){
         "create"=>{
-                let mut user_name = match ask_for_input("name".to_string(),None){
+                let user_name = match ask_for_input("name".to_string(),None){
                     Ok(val)=>val,
                     Err(err)=>{
                         println!("Error: {}",err);
                         continue;
                     }
                 };
-                let mut user_phone = match ask_for_input("phone".to_string(),None){
+                let user_phone = match ask_for_input("phone".to_string(),None){
                     Ok(val)=>val,
                     Err(err)=>{
                         println!("Error: {}",err);
                         continue;
                     }
                 };
-                let mut user_email = match ask_for_input("email".to_string(),None){
+                let user_email = match ask_for_input("email".to_string(),None){
                     Ok(val)=>val,
                     Err(err)=>{
                         println!("Error: {}",err);
@@ -170,7 +160,7 @@ fn main() {
                 
         }
         "read"=>{
-                let mut user_info = match ask_for_input("name".to_string(),Some("Search by name, phone, or email")) {
+                let user_info = match ask_for_input("name".to_string(),Some("Search by name, phone, or email")) {
                     Ok(val)=>val,
                     Err(err)=>{
                         println!("Error: {}",err);
@@ -190,21 +180,21 @@ fn main() {
             }
         }
         "update"=>{
-            let mut user_input = match ask_for_input("name".to_string(),Some("Search by name,phone, or email")) {
+            let user_input = match ask_for_input("name".to_string(),Some("Search by name,phone, or email")) {
                     Ok(val)=>val,
                     Err(err)=>{
                         println!("Error: {}",err);
                         continue;
                     }
                 };
-            let mut field_name = match ask_for_input("name".to_string(),Some("Enter field name to update: name,email,phone")) {
+            let field_name = match ask_for_input("name".to_string(),Some("Enter field name to update: name,email,phone")) {
                     Ok(val)=>val,
                     Err(err)=>{
                         println!("Error: {}",err);
                         continue;
                     }
                 };
-            let mut updated_value = match ask_for_input("".to_string(),Some("Enter updated value: ")) {
+            let updated_value = match ask_for_input("".to_string(),Some("Enter updated value: ")) {
                     Ok(val)=>val,
                     Err(err)=>{
                         println!("Error: {}",err);
@@ -234,7 +224,7 @@ fn main() {
 
         }
         "delete"=>{
-            let mut user_info = match ask_for_input("name".to_string(),Some("Search by name, phone, or email")) {
+            let user_info = match ask_for_input("name".to_string(),Some("Search by name, phone, or email")) {
                     Ok(val)=>val,
                     Err(err)=>{
                         println!("Error: {}",err);
@@ -245,7 +235,7 @@ fn main() {
                   println!("Name | Email | Phone ");
                   println!("{} | {} | {}",user.name,user.email,user.phone);
 
-                let mut is_delete:bool = match ask_for_input("".to_string(), Some("Are you sure you want to delete this user: (Y)yes (N)no")) {
+                let is_delete:bool = match ask_for_input("".to_string(), Some("Are you sure you want to delete this user: (Y)yes (N)no")) {
                     Ok(val)=>{
                         if val.to_lowercase() == "y" {
                              true
@@ -259,7 +249,7 @@ fn main() {
                         false
                     }
                 };
-                if(!is_delete){
+                if !is_delete {
                     println!("Deletion cancelled");
                     continue;
                 }
@@ -277,7 +267,7 @@ fn main() {
             
         }
         "export"=>{
-            let mut export_method:Export_method = match ask_for_input("name".to_string(),Some("Export to CSV or JSON: ")) {
+            let export_method:Export_method = match ask_for_input("name".to_string(),Some("Export to CSV or JSON: ")) {
                     Ok(val)=>{
                         match val.trim().to_lowercase().as_str(){
                             "csv"=>Export_method::CSV,
