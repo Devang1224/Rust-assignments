@@ -25,7 +25,7 @@ fn main() {
         return;
     }
 
-   let mut file = OpenOptions::new().append(true).append(true).open("./notes.txt").unwrap(); 
+   let mut file = OpenOptions::new().append(true).open("./notes.txt").unwrap(); 
    file.write_all(userInput.as_bytes());
 
     println!("Updated successfully");

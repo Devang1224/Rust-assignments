@@ -1,0 +1,9 @@
+[package]
+name = "multithreaded-file-hasher"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+indicatif = "0.18.0"
+sha2 = "0.10.9"
+use = "0.0.1-pre.0"

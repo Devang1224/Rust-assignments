@@ -1,0 +1,6 @@
+/Users/devangmehra/Desktop/rust/assignments/level_2/async_http_pinger/target/debug/deps/native_tls-4235a1c07da3d0d4.d: /Users/devangmehra/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/native-tls-0.2.14/src/lib.rs /Users/devangmehra/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/native-tls-0.2.14/src/imp/security_framework.rs
+
+/Users/devangmehra/Desktop/rust/assignments/level_2/async_http_pinger/target/debug/deps/libnative_tls-4235a1c07da3d0d4.rmeta: /Users/devangmehra/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/native-tls-0.2.14/src/lib.rs /Users/devangmehra/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/native-tls-0.2.14/src/imp/security_framework.rs
+
+/Users/devangmehra/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/native-tls-0.2.14/src/lib.rs:
+/Users/devangmehra/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/native-tls-0.2.14/src/imp/security_framework.rs:
